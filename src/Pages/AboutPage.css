@@ -1,0 +1,168 @@
+.AboutPage {
+  padding: 60px 1rem;
+  min-height: calc(100vh - 70px);
+  background-color: rgb(30, 30, 46); /* updated dark bg */
+  color: #f8fafc;
+  font-family: 'Inter', sans-serif;
+}
+
+.AboutHeader {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.AboutHeader h1 {
+  font-size: 2.8rem;
+  color: #ffedd5; /* warm light heading */
+  margin-bottom: 16px;
+  font-family: 'DM Serif Display', serif;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.4); /* golden glow */
+}
+
+.AboutSubtitle {
+  font-size: 1.25rem;
+  color: #fbcfe8;
+  font-weight: 400;
+}
+
+.AboutContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.AboutSection {
+  background: rgba(255, 255, 255, 0.05); /* glass effect */
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.1), 0 10px 25px rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  margin-bottom: 60px;
+  border: 1px solid rgba(255, 215, 0, 0.2); /* golden border */
+}
+
+.AboutSection h2 {
+  font-size: 1.8rem;
+  color: #ffe4b5;
+  margin-bottom: 24px;
+  font-family: 'DM Serif Display', serif;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.AboutSection h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #facc15, #fb923c); /* warm peach-gold */
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
+}
+
+.AboutSection p {
+  color: #f1f5f9;
+  line-height: 1.7;
+}
+
+.AboutFeatures {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 640px) {
+  .AboutFeatures {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.FeatureCard {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.08), 0 6px 18px rgba(255, 255, 255, 0.05);
+  padding: 32px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.FeatureCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.3), 0 10px 25px rgba(255, 255, 255, 0.08);
+}
+
+.FeatureIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f59e0b, #fb923c); /* warm peach-orange */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+}
+
+.FeatureCard h3 {
+  font-size: 1.25rem;
+  font-family: 'DM Serif Display', serif;
+  color: #fff4e6;
+  margin-bottom: 12px;
+}
+
+.FeatureCard p {
+  color: #f8fafc;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.StepsList {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0;
+}
+
+.StepsList li {
+  display: flex;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.StepNumber {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #eab308, #f97316);
+  color: white;
+  font-weight: bold;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.3);
+}
+
+.StepContent h4 {
+  font-size: 1.1rem;
+  color: #ffe4b5;
+  margin-bottom: 6px;
+}
+
+.StepContent p {
+  color: #e2e8f0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .AboutPage {
+    padding: 80px 0;
+  }
+
+  .AboutHeader {
+    margin-bottom: 80px;
+  }
+}

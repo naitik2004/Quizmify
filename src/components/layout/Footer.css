@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.modern-footer {
+  background: linear-gradient(to right, #1f1f1f, #2c2c2c); /* Elegant dark gradient */
+  padding: 2.5rem 1rem;
+  border-top: 1px solid #3a3a3a;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  text-align: center;
+  max-width: 1024px;
+  width: 100%;
+}
+
+.footer-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: 'Clash Display', 'General Sans', sans-serif;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer-copy {
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  font-family: 'Satoshi', 'Inter', sans-serif;
+  opacity: 0.8;
+}

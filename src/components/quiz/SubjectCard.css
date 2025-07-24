@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Space+Mono&display=swap');
+
+.subject-card {
+  width: 100%;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  background-color: #1a1c23; /* deep dark background */
+  border: 1px solid #2c2f36;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Space Mono', monospace;
+}
+
+/* Top animated border */
+.subject-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #ff7eb3, #ff758c);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.subject-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5);
+}
+
+.subject-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Icon */
+.subjectcard-logo {
+  font-size: 2.5rem;
+  color: #ff9f9f;
+  margin-bottom: 1rem;
+}
+
+/* Title */
+.subjectcard-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* Description */
+.subjectcard-description {
+  font-size: 1rem;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Details row */
+.subjectcard-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+/* Questions tag */
+.subjectcard-questions {
+  font-size: 0.75rem;
+  background-color: #2f3241;
+  color: #cbd5e1;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-family: 'Space Mono', monospace;
+}
+
+/* Submit button */
+.subjectcard-submit {
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(to right, #ff7eb3, #ff758c);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-family: 'Space Mono', monospace;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: auto;
+}
+
+.subjectcard-submit:hover {
+  background: linear-gradient(to right, #ffb199, #ff6f91);
+  transform: translateY(-2px);
+}
+
+.subjectcard-submit:active {
+  transform: translateY(1px);
+}
+
+/* Loading Text */
+.loading-text {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  font-style: italic;
+  text-align: center;
+}

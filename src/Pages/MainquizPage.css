@@ -1,0 +1,310 @@
+/* Main quiz page styling */
+
+.Body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(30, 30, 46); /* dark background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.QuizPage {
+  min-height: 100vh;
+  background: rgb(30, 30, 46);
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.QuizTitle {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, #ffb3a7, #ff6f91, #e879f9);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
+}
+
+.QuizCard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 32px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 720px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+/* Quiz header */
+
+.QuizHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.QuizHeader h2 {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.QuizHeader p {
+  font-size: 1rem;
+  color: #f472b6;
+  font-weight: bold;
+}
+
+/* Question styling */
+
+.QuestionBox h3 {
+  font-size: 1.3rem;
+  color: #f1f5f9;
+  margin-bottom: 20px;
+}
+
+/* Option styling */
+
+.OptionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.OptionBtn {
+  padding: 14px 20px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 2px solid #334155;
+  border-radius: 12px;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  color: #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.OptionBtn:hover {
+  background-color: rgba(255, 182, 193, 0.15);
+  border-color: #f472b6;
+}
+
+.OptionBtn.Selected {
+  background-color: #f472b6;
+  color: #ffffff;
+  font-weight: bold;
+  border-color: transparent;
+}
+
+/* Navigation buttons */
+
+.NavigationButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.NavigationButtons button {
+  flex: 1;
+  padding: 12px 0;
+  margin: 0 6px;
+  background: linear-gradient(to right, #ff6f91, #c084fc);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.NavigationButtons button:hover:not(:disabled) {
+  background: linear-gradient(to right, #e879f9, #f472b6);
+}
+
+.NavigationButtons button:disabled {
+  background-color: #475569;
+  cursor: not-allowed;
+}
+
+/* Responsive for mobile */
+
+@media (max-width: 600px) {
+  .QuizCard {
+    padding: 24px 16px;
+  }
+
+  .NavigationButtons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .NavigationButtons button {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
+/* Result Card */
+
+.ResultCard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ResultHead {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #f472b6;
+  margin-bottom: 20px;
+}
+
+.ResultDeclare {
+  font-size: 1.6rem;
+  color: #e879f9;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.ResultDeclare span {
+  color: #f472b6;
+  font-size: 2rem;
+}
+
+.ResultSuggest {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Review Section */
+
+.ReviewSection {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.ReviewTitle {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #f1f5f9;
+  text-align: center;
+  font-weight: 600;
+}
+
+.ReviewQuestion {
+  border-left: 5px solid #334155;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.ReviewQuestion.Correct {
+  border-left-color: #10b981;
+  background: #064e3b;
+}
+
+.ReviewQuestion.Wrong {
+  border-left-color: #ef4444;
+  background: #7f1d1d;
+}
+
+.QuestionText {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #f8fafc;
+  margin-bottom: 10px;
+}
+
+.UserAnswer,
+.CorrectAnswer {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin: 4px 0;
+}
+
+.CorrectAnswer strong {
+  color: #16a34a;
+}
+
+.UserAnswer strong {
+  color: #e0f2fe;
+}
+
+.ReviewQuestion.Wrong .CorrectAnswer strong {
+  color: #f87171;
+}
+
+.QuizCard,
+.ResultCard,
+.ReviewSection {
+  background: rgba(255, 255, 255, 0.05); /* Transparent glass */
+  backdrop-filter: blur(12px);          /* Blur for glassmorphism */
+  -webkit-backdrop-filter: blur(12px);
+  padding: 32px;
+  border-radius: 18px;
+  border: 1.5px solid rgba(255, 215, 0, 0.4); /* Light gold border */
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.4); /* Glowing golden edge */
+  transition: 0.4s ease;
+}
+
+/* On hover – stronger glow effect */
+.QuizCard:hover,
+.ResultCard:hover,
+.ReviewSection:hover {
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+  border-color: rgba(255, 215, 0, 0.8);
+}
+
+
+
+
+
+.NavigationButtons button {
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.NavigationButtons button:hover:not(:disabled) {
+  background: rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+  border-color: rgba(255, 215, 0, 0.8);
+}
