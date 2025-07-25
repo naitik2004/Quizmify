@@ -6,14 +6,14 @@ function SearchBar({onSearch}){
 const [searchquery,setsearchquery] = useState('');
 
 const handleSearch = (e) =>{
-    e.preventDefault();
+    e.preventDefault(); //prevent form reloading page
     onSearch(searchquery)
 }
 
     return(
         <form className='searchbar' onSubmit={handleSearch}>
             <div className='searchbar-container'>
-                <input type='text' placeholder='search quizzess....' value={searchquery} 
+                <input type='text' placeholder='Search The Topics You Want.!!' value={searchquery} 
                 onChange={(e)=>{setsearchquery(e.target.value)}}
                 className='searchbar-input'
                 />

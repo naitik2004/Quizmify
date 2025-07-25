@@ -10,7 +10,7 @@ body {
   color: #e4e6eb;
 }
 
-/* Navbar */
+
 .navbar {
   width: 100%;
   background: linear-gradient(to right, #1c1f26, #101216);
@@ -22,7 +22,7 @@ body {
   z-index: 100;
 }
 
-/* Navigation Links */
+
 nav ul {
   list-style: none;
   display: flex;
@@ -40,7 +40,7 @@ nav li {
   cursor: pointer;
 }
 
-/* Brand - Left Aligned */
+
 nav li:first-child {
   font-weight: 700;
   font-size: 1rem;
@@ -51,13 +51,13 @@ nav li:first-child {
   margin-right: auto;
 }
 
-/* Hover effect */
+
 nav li:hover {
   background-color: #2a2e3c;
   color: #ffffff;
 }
 
-/* Hamburger menu for mobile */
+
 .menubutton {
   display: none;
   background: none;
@@ -67,7 +67,7 @@ nav li:hover {
   cursor: pointer;
 }
 
-/* Sidebar */
+
 .sidebar {
   display: none;
   flex-direction: column;
@@ -76,7 +76,7 @@ nav li:hover {
   right: 0;
   width: 240px;
   height: 100vh;
-  background: rgba(30, 30, 46, 0.8); /* dark glass effect */
+  background: rgba(30, 30, 46, 0.8);
   backdrop-filter: blur(12px);
   border-left: 2px solid #ffc86b;
   padding: 2rem 1.2rem;
@@ -97,7 +97,7 @@ nav li:hover {
   color: #fff;
 }
 
-/* User section */
+
 .nav-user {
   display: flex;
   align-items: center;

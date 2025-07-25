@@ -31,7 +31,7 @@ export function SubjectCard({ subject }) {
 
             {
                 loading ? (
-                    <p className='loading-text'>⏳ Please give us a second while we prepare your quiz...</p>
+                    <p className='loading-text'>⏳ Please wait a while we prepare your quiz...</p>
                 ) : (
                     <button className='subjectcard-submit' onClick={handleTakeQuiz}>
                         Take Quiz
